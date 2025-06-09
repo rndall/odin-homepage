@@ -9,6 +9,8 @@
 
 body {
   font-family: Roboto, sans-serif;
+  display: grid;
+  gap: 48px;
 }
 
 .section {
@@ -31,7 +33,7 @@ body {
   right: 0;
   bottom: 0;
   transform: skewY(var(--skew-angle))
-    translateY(calc(var(--skew-padding) * -2 - 250px));
+    translateY(calc(var(--skew-padding) * -2 - 260px));
 }
 
 .image-wrapper {
@@ -53,6 +55,7 @@ body {
 .title {
   font-family: "Playfair Display", serif;
   font-weight: normal;
+  text-align: center;
 }
 
 .title--white {
@@ -71,12 +74,16 @@ body {
   font-size: 3rem;
 }
 
-.title--center {
-  text-align: center;
+.title--start {
+  text-align: start;
 }
 
 .text {
   color: var(--text-gray);
+}
+
+.text--xl {
+  font-size: 1.25rem;
 }
 
 .text--2xl {
@@ -91,4 +98,54 @@ body {
   margin-inline: auto;
   display: flex;
   gap: 16px;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+}
+
+.projects {
+  display: grid;
+  gap: 60px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.project__img {
+  min-height: 275px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project__content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project__title {
+  margin-inline-start: 16px;
+}
+
+.project__desc {
+  padding-inline: 8px;
+}
+
+.icon-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
