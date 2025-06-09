@@ -1,27 +1,37 @@
 :root {
-  --page-padding: 16px 16px;
+  --skew-angle: -31deg;
+  --magic-number: 0.30043;
+  --content-width: 100vw;
+  --skew-padding: calc(var(--content-width) * var(--magic-number));
   --accent-color: #0891b2;
+  --text-gray: #565656;
 }
 
 body {
   font-family: Roboto, sans-serif;
-  padding: var(--page-padding);
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Playfair Display", serif;
+.section {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  margin: 16px;
 }
 
-.diagonal-box {
+.main {
+  position: relative;
+}
+
+.main::before {
+  content: "";
   position: absolute;
   background-color: var(--accent-color);
-  height: 100%;
-  width: 100%;
-  top: -58%;
+  top: 0;
   left: 0;
-  transform: skewY(-31deg);
+  right: 0;
+  bottom: 0;
+  transform: skewY(var(--skew-angle))
+    translateY(calc(var(--skew-padding) * -2 - 250px));
 }
 
 .image-wrapper {
@@ -34,10 +44,14 @@ h3 {
   object-fit: cover;
 }
 
-.title {
+.main__title {
   position: absolute;
   bottom: -8px;
   left: 12px;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
   font-weight: normal;
 }
 
@@ -49,6 +63,32 @@ h3 {
   text-shadow: 0 3px 1px rgba(0, 0, 0, 0.2);
 }
 
+.title--4xl {
+  font-size: 2.25rem;
+}
+
 .title--5xl {
   font-size: 3rem;
+}
+
+.title--center {
+  text-align: center;
+}
+
+.text {
+  color: var(--text-gray);
+}
+
+.text--2xl {
+  font-size: 1.5rem;
+}
+
+.text--lg {
+  font-size: 1.125rem;
+}
+
+.icon-links {
+  margin-inline: auto;
+  display: flex;
+  gap: 16px;
 }
