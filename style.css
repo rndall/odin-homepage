@@ -91,6 +91,10 @@ body {
   text-align: start;
 }
 
+.main__content {
+  display: grid;
+}
+
 .about-me__title {
   text-align: center !important;
 }
@@ -186,6 +190,10 @@ body {
   padding-block-start: 1rem;
 }
 
+.content-wrapper {
+  display: grid;
+}
+
 .address {
   margin-block: 16px;
 }
@@ -243,7 +251,7 @@ body {
 
   .main__title {
     top: 0;
-    transform: translate(61%, 1%);
+    transform: translate(70%, 1%);
     text-wrap: nowrap;
     text-align: center;
   }
@@ -253,6 +261,7 @@ body {
   }
 
   .main__content {
+    display: block;
     padding-inline: 32px;
     padding-block: 81px 64px;
     background-color: white;
@@ -354,6 +363,7 @@ body {
   }
 
   .main__content {
+    display: grid;
     margin: 0;
     padding: 1.75rem 1.5rem 1.5rem;
   }
