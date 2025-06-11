@@ -91,7 +91,7 @@ body {
   text-align: start;
 }
 
-.title--center {
+.about-me__title {
   text-align: center !important;
 }
 
@@ -105,10 +105,6 @@ body {
 
 .text--xl {
   font-size: 1.25rem;
-}
-
-.text--2xl {
-  font-size: 1.5rem;
 }
 
 .icon-links {
@@ -126,9 +122,14 @@ body {
   align-items: center;
 }
 
+.about-me__icon {
+  font-size: 1.5rem;
+}
+
 .projects {
   margin-block-start: 16px;
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 60px;
 }
 
@@ -179,7 +180,9 @@ body {
   margin-block-start: 12px;
 }
 
-.container--footer {
+.footer__container {
+  --max-width: 100dvw;
+  max-width: var(--max-width);
   padding-block-start: 1rem;
 }
 
@@ -266,7 +269,6 @@ body {
   }
 
   .projects {
-    grid-template-columns: 1fr 1fr;
     gap: 56px 36px;
   }
 
@@ -282,8 +284,8 @@ body {
     margin-block-start: 8rem;
   }
 
-  .container--footer {
-    max-width: 768px;
+  .footer__container {
+    --max-width: 768px;
     width: unset;
     padding: 1rem 2rem 2.5rem 3rem;
   }
@@ -292,6 +294,7 @@ body {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
+    gap: 2rem;
   }
 
   .footer__links {
@@ -313,5 +316,81 @@ body {
 
   .footer__img--mobile {
     display: none;
+  }
+}
+
+@media (width >= 64rem) {
+  :root {
+    --diagonal-box-translate-y: -45%;
+  }
+
+  .container {
+    --max-width: 64rem;
+    --padding: 2.5rem;
+  }
+
+  .main__container {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    float: unset;
+    margin: 4.5rem 0;
+    padding: 0;
+  }
+
+  .image {
+    min-width: 100%;
+    height: 530px;
+  }
+
+  .main__title {
+    top: unset;
+    bottom: 0;
+    left: 0;
+    transform: translate(15px, 8px);
+  }
+
+  .main__content {
+    margin: 0;
+    padding: 1.75rem 1.5rem 1.5rem;
+  }
+
+  .about-me__title {
+    text-align: start !important;
+  }
+
+  .icon-links {
+    display: flex;
+    justify-self: end;
+    padding-block-start: 2rem;
+  }
+
+  .about-me__icon {
+    font-size: 1.75rem;
+  }
+
+  .footer {
+    margin: 0;
+  }
+
+  .footer__container {
+    padding: 2rem 3.75rem;
+  }
+
+  .footer__content {
+    grid-template-columns: auto 500px;
+    align-items: start;
+  }
+
+  .footer__links {
+    justify-self: start;
+    padding: 0;
+  }
+
+  .footer__img {
+    width: 100%;
   }
 }
