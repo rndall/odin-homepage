@@ -243,7 +243,7 @@ body {
 
   .main__title {
     top: 0;
-    transform: translateX(61%);
+    transform: translate(61%, 1%);
     text-wrap: nowrap;
     text-align: center;
   }
