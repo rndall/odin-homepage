@@ -215,7 +215,7 @@ body {
 @media (width >= 48rem) {
   :root {
     --skew-angle: -15deg;
-    --diagonal-box-translate-y: -55%;
+    --diagonal-box-translate-y: -60%;
   }
 
   .container {
